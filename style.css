@@ -1,0 +1,363 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7fa;
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+
+img {vertical-align: middle;}
+
+.slideshow-container {
+  max-width: 1320px;
+  position: relative;
+  margin: auto;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev{
+  left: 0;
+
+
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.swiper-button-next:after, .swiper-button-prev:after{
+  color: black;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 auto;
+  font-size: 30px !important; 
+
+  
+
+}
+
+
+/* /////////////////       Footer      //////////////////////// */
+
+
+
+
+
+.menubar {
+  margin: 10px 0;
+}
+
+.menubar nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menubar nav ul li {
+  display: inline-block;
+  margin: 0 20px 0 0;
+}
+
+.menubar nav ul li a {
+  display: block;
+  font-size: 12px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  padding: 25px 0;
+  letter-spacing: 0.5px;
+  color: #000000;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.menubar nav ul li:hover > a {
+  text-decoration: none;
+  color: #dd7e2e;
+}
+
+.menubar nav ul li .mega-menu {
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 100%;
+  background: #ffffff;
+  left: 0;
+  transition: 0.3s;
+  box-shadow: 0px 5px 8px rgba(106, 106, 106, 0.4);
+  border: 1px solid #ebebeb;
+  padding: 24px 30px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.menubar nav ul li:hover .mega-menu {
+  visibility: visible;
+  opacity: 1;
+  z-index: 99;
+}
+
+.menubar nav ul li .mega-menu ul {
+  width: 25%;
+  float: left;
+}
+
+.menubar nav ul li .mega-menu ul li {
+  display: block;
+  margin: 0;
+  padding: 6px 0px;
+}
+
+.menubar nav ul li .mega-menu ul li a {
+  text-transform: none;
+  font-size: 13px;
+  padding: 0;
+}
+
+@media (max-width: 767.98px) {
+  .menubar nav ul li .mega-menu ul {
+    width: 100%;
+    float: left;
+    margin: 0 0 22px;
+  }
+}
+
+@media (min-width: 768px) {
+  .menubar nav ul li .mega-menu ul {
+    width: 100%;
+    float: left;
+    margin: 0 0 22px;
+  }
+}
+
+@media (min-width: 992px) {
+  .menubar nav ul li .mega-menu ul {
+    width: 25%;
+  }
+}
+
+/* div {
+} */
+
+
+
+/* ///////////////////////chat css//////////////////////// */
+
+
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 00px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* position: relative; */
+    font-family: Montserrat, sans-serif;
+}
+
+*:focus {
+    outline: none;
+}
+
+
+.chat_box {
+    width: 340px;
+    height: 420px;
+    margin: calc(50vh - 350px) auto;
+    background: #eeeeee;
+    border-radius: 10px;
+    box-shadow: 0 0 55px -12px #616161;
+    overflow: hidden;
+}
+
+.chat_h {
+    background: #fafafa;
+    padding: 18px 20px;
+    box-shadow: 0 1px 5px silver;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.chat_h i {
+    font-size: 21px;
+    color: #757575;
+    cursor: pointer;
+}
+
+.chat_h div {
+    font-size: 16px;
+    color: #854e4b;
+    display: inline;
+}
+
+.chat_b {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0px 30px 100px ;
+}
+
+.chat_b input[type="text"] {
+    width: 230px;
+    border-radius: 20px;
+    border: none;
+    
+    padding: 16px 22px;
+    box-shadow: 0 3px 10px -2px grey;
+}
+
+.chat_b input[type="submit"] {
+    background: #b06763;
+    border: none;
+    color: white;
+    padding: 12px 0px 12px 14px;
+    font-size: 23px;
+    border-radius: 100%;
+    cursor: pointer;
+    float: right;
+    box-shadow: 0 0 30px -2px grey;
+}
+
+.chat_b input[type="submit"]:hover {
+    background:  rgb(4, 92, 255);
+}
+
+.chat {
+    padding: 15px 20px;
+    display: inline-block;
+    clear: both;
+    margin-top: 10px;
+    font-size: 14px;
+    word-wrap: break-word;
+    max-width: 78%;
+}
+
+.chat_me {
+    background:  rgb(0, 140, 255);
+    color: white;
+    float: right;
+    margin-right: 20px;
+    border-radius: 13px 13px 0 13px;
+}
+
+.chat_ar {
+    background: #f6ded4;
+    color: #212121;
+    float: left;
+    margin-left: 20px;
+    border-radius: 13px 13px 13px 0;
+}
+
+.chat_s {
+    height: 270px;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 0 3px black;
+    background: #ffee00;
+}

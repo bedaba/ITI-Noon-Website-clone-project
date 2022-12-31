@@ -1,0 +1,399 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Login Form</title>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins');
+
+/* BASIC */
+
+html {
+  background-color:rgb(254,213,2);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+}
+
+a {
+  color: #92badd;
+  display:inline-block;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+h2 {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display:inline-block;
+  margin: 40px 8px 10px 8px; 
+  color: #cccccc;
+}
+
+
+
+  /* /////////في النص////////// */
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column; 
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 20px;
+}
+
+#formContent {
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+  background: #fff;
+  padding: 30px;
+  width: 90%;
+  max-width: 450px;
+  position: relative;
+  padding: 0px;
+  -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+#formFooter {
+  background-color: #f6f6f6;
+  border-top: 1px solid #dce8f1;
+  padding: 25px;
+  text-align: center;
+  -webkit-border-radius: 0 0 10px 10px;
+  border-radius: 0 0 10px 10px;
+}
+
+
+
+/* TABS */
+
+h2.inactive {
+  color: #cccccc;
+}
+
+h2.active {
+  color: #0d0d0d;
+  border-bottom: 2px solid rgb(254,213,2);
+}
+
+
+
+
+input[type=button], input[type=submit], input[type=reset]  {
+  background-color: rgb(254,213,2);
+  border: none;
+  color: white;
+  padding: 15px 80px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 13px;
+  -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  margin: 5px 20px 40px 20px;
+
+}
+
+input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
+  background-color: rgb(245, 184, 18);
+}
+
+input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
+  -moz-transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -o-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+}
+
+input[type=text] ,input[type=password] {  
+  background-color: #f6f6f6;
+  border: none;
+  color: #0d0d0d;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  width: 85%;
+  border: 2px solid #f6f6f6;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+input[type=text]:focus {
+  background-color: #fff;
+  border-bottom: 2px solid rgb(254,213,2);
+}
+
+input[type=text]:placeholder {
+  color: #cccccc;
+}
+
+
+
+/* ANIMATIONS */
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+/* Simple CSS3 Fade-in Animation */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fadeIn {
+  opacity:0;
+  -webkit-animation:fadeIn ease-in 1;
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
+
+.fadeIn.first {
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+.fadeIn.second {
+  -webkit-animation-delay: 0.6s;
+  -moz-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+
+.fadeIn.third {
+  -webkit-animation-delay: 0.8s;
+  -moz-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+
+.fadeIn.fourth {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+
+.underlineHover:hover {
+  color: #0d0d0d;
+}
+
+.underlineHover:hover:after{
+  width: 100%;
+}
+
+
+
+
+*:focus {
+    outline: none;
+} 
+
+#icon {
+  width:60%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+</style>
+</head>
+<body>
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+      <a href="login.html"> Sign In </a>
+      <h2 class="active"  >Sign Up </h2>
+  
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <img src="noon Scraping/noon-logo-en.svg" style="height: 70px; width:70px"  id="icon" alt="User Icon" />
+      </div>
+  
+      <!-- Login Form -->
+      <form id="login" action="login.html" target="_blank" method="post">
+        <input type="text" id="login" class="fadeIn second" name="login" placeholder="Email">
+        <input type="password" id="login" class="fadeIn second" name="login" placeholder="password">
+
+        <input type="password" id="password" class="fadeIn third" name="login" placeholder="Re-password">
+        <input type="submit" class="fadeIn fourth" value="Sign Up">
+      </form>
+  
+    
+  
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+<!-- <div class="login-form">
+  <form id="login" action="index.html" target="_blank" method="post">
+    <h1>Login</h1>
+    <div class="content">
+      <div class="input-field">
+        <input type="email" placeholder="Email" autocomplete="nope">
+      </div>
+      <div class="input-field">
+        <input type="password" placeholder="Password" autocomplete="new-password">
+      </div>
+      <a href="" class="link">Forgot?</a>
+      <p></p>
+      <a href="register.html" class="link">Register</a>
+    </div>
+    <div class="action">
+      <button id="login">Sign in</button>
+      
+
+    </div>
+  </form> 
+</div> -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #2340e6;
+  color: rgb(255, 255, 255);
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+a {
+  color: dodgerblue;
+}
+
+.signin {
+  background-color: #ccc7c7;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<form action="thanks.html" target="_blank" method="post" autocomplete="off">
+  <div class="container">
+    <h1>Register</h1>
+    <p>Please fill  this form </p>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+    <label for="p"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="p" id="p" required>
+
+    <label for="p-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="p-repeat" id="p-repeat" required>
+    <!-- <a href="./thanks.html" class="registerbtn">Register</a> -->
+
+    <button type="submit" class="registerbtn" >Register</button>
+  </div>
+  
+  <div class="container signin">
+    <p>Already have an account? <a href="login.html">Sign in</a>.</p>
+  </div>
+</form>
+
+</body>
+</html> -->
